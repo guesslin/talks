@@ -1,0 +1,92 @@
+資訊安全分析議題
+以偵測惡意網域域名中之DGA為例
+20 Jul 2015
+Tags: security, DGA, golang
+
+Yu-Han Lin(林育漢)
+副工程師, 財團法人資訊工業策進會
+guesslin1986@gmail.com
+https://www.google.com/+林育漢
+@guesslin1986
+
+* Who am I?
+
+.image images/head.jpg _ 215
+- Yu-Han Lin(林育漢), aka guesslin
+- 財團法人資訊工業策進會資安科技研究所
+- 國立高雄大學資訊管理學系碩士班
+
+* Agenda
+
+- 常見的資安議題
+- 資料探勘於資安領域常見應用
+- 以偵測惡意網域域名中之DGA為例
+
+* 常見的資安議題
+
+- 釣魚信件(Phishing)
+- 殭屍網路(Botnet)
+- 進階持續性滲透攻擊(APT)
+- ...etc
+
+* 釣魚信件
+
+常看到這樣的信件嗎？
+
+.image ./images/PhishingMail.png
+
+* 殭屍網路
+
+.image http://image-cdn.zap2it.com/photogallery/images/zap-the-walking-dead-season-4-pics-039 _ 800
+
+噢！不是這個殭屍也不是這個網
+
+* 殭屍網路
+
+.image ./images/botnet.png 500 _
+
+* 進階持續性滲透攻擊(APT)
+
+.image ./images/Advanced_persistent_threat_lifecycle.jpg
+
+.link https://upload.wikimedia.org/wikipedia/commons/7/73/Advanced_persistent_threat_lifecycle.jpg 資料來源
+
+* 資料探勘於資安領域常見應用
+
+- 分類分群
+- 偵測判斷
+
+* 分群分類
+
+- 惡意程式
+- 駭客族群
+
+* 偵測判斷
+
+- 惡意程式
+- 惡意入侵偵測
+- 惡意網域域名
+
+* 以偵測惡意網域域名中之DGA為例
+
+* DGA 是什麼？
+
+網域名稱產生演算法，常見於殭屍網路或惡意程式之中用來避免特定網域字串比對偵測，通常同一駭客族群使用之DGA會相同。
+
+.link https://en.wikipedia.org/wiki/Domain_generation_algorithm Domain Generation Algorithm
+
+* DGA 範例程式
+
+.code dga/dga.go /func main/,/^}/
+
+依照日期產生亂數網域名稱
+
+.play dga/dga.go /start DGA OMIT/,/end DGA OMIT/
+
+.link https://en.wikipedia.org/wiki/Domain_generation_algorithm#Example 亂數網域產生演算法
+
+* 判斷方法
+
+* 資料來源
+
+* 驗證結果
