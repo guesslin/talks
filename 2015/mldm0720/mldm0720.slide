@@ -24,6 +24,8 @@ https://www.google.com/+林育漢
 
 * 常見的資安議題
 
+* 常見的資安議題
+
 - 釣魚信件(Phishing)
 - 殭屍網路(Botnet)
 - 進階持續性滲透攻擊(APT)
@@ -31,9 +33,21 @@ https://www.google.com/+林育漢
 
 * 釣魚信件
 
-常看到這樣的信件嗎？
+常看到像這樣的信件嗎？
 
 .image ./images/PhishingMail.png
+
+攻擊者寄出一封偽裝成受害者可能感興趣的電子郵件
+
+並在信件內附上連結誘使受害者點擊
+
+目的以竊取受害者隱私資料（網站密碼、信用卡資訊等）
+
+* 殭屍網路
+
+.image ./images/minecraft-zombies.jpg
+
+噢！不是這個殭屍
 
 * 殭屍網路
 
@@ -47,31 +61,82 @@ https://www.google.com/+林育漢
 
 * 進階持續性滲透攻擊(APT)
 
+APT攻擊行為也被稱為有成其針對性目標的攻擊
+
+這樣的攻擊通常具有一個預先鎖定的目標人物或者是組織
+
+透過長期蒐集目標資訊以針對目標量身打造攻擊工具
+
+因此APT攻擊與傳統攻擊不同，不容易依靠單一的防禦手法可以偵測或防範
+
+- APT kill chain
+
+.image ./images/apt_kill_chain.jpg
+
+* 進階持續性滲透攻擊(APT)
+
+.link https://upload.wikimedia.org/wikipedia/commons/7/73/Advanced_persistent_threat_lifecycle.jpg APT 生命週期
+
 .image ./images/Advanced_persistent_threat_lifecycle.jpg
 
-.link https://upload.wikimedia.org/wikipedia/commons/7/73/Advanced_persistent_threat_lifecycle.jpg 資料來源
+* 資安事件處理
+
+.image ./images/NIST_10.png 550 _
+
+* 資安事件處理
+
+- 現場鑑識
+主要工作為在現場針對目標主機盡可能收集完整資訊，並且避免破壞資料的正確性
+蒐集資訊包括：主機用途、系統日誌、惡意程式、以及網路封包
+
+- 實驗室分析
+將現場所蒐集到的資料，於嚴格控管的實驗室環境中進行事後分析
+由系統日誌檔案中釐清駭客入侵時間、手法、管道以及行為
+對於惡意程式則進行靜態與動態分析，瞭解其功能與行為模式
 
 * 資料探勘於資安領域常見應用
 
-- 分類分群
-- 偵測判斷
+* 資料探勘於資安領域常見應用
+
+在資安領域中對於資料探勘最常見的應用多半為偵測未知或潛藏的攻擊行為
+
+因此在研究領域上有相當多的資料探勘應用於入侵偵測上的研究
+
+在資安領域中，偵測未知的攻擊行為依然是一個相當重要的議題
+
+除此之外還需要了解過去已發生的攻擊行為其背後主導者的關聯
+
+因此針對攻擊的分類分群應用亦相當重視
 
 * 分群分類
 
 - 惡意程式
+依照功能性分類
+依照攻擊目的分群
+
 - 駭客族群
+竟可能的在眾多資安事件中找出相關連的攻擊者
+（攻擊手法、惡意程式特徵、連線位置等）
 
 * 偵測判斷
 
 - 惡意程式
+未知的惡意程式
+
 - 惡意入侵偵測
+入侵偵測系統
+
 - 惡意網域域名
 
 * 以偵測惡意網域域名中之DGA為例
 
 * DGA 是什麼？
 
-網域名稱產生演算法，常見於殭屍網路或惡意程式之中用來避免特定網域字串比對偵測，通常同一駭客族群使用之DGA會相同。
+網域名稱產生演算法
+
+常見於殭屍網路或惡意程式之中用來避免特定網域字串比對偵測
+
+通常同一駭客族群會使用相同的DGA
 
 .link https://en.wikipedia.org/wiki/Domain_generation_algorithm Domain Generation Algorithm
 
@@ -83,10 +148,42 @@ https://www.google.com/+林育漢
 
 .play dga/dga.go /start DGA OMIT/,/end DGA OMIT/
 
-.link https://en.wikipedia.org/wiki/Domain_generation_algorithm#Example 亂數網域產生演算法
+.link https://en.wikipedia.org/wiki/Domain_generation_algorithm#Example 亂數網域產生範例演算法
 
-* 判斷方法
+* 網域名稱特徵
 
-* 資料來源
+DGA所產生的網域名稱
 
-* 驗證結果
+.link https://zeltser.com/malicious-ip-blocklists/ Malicious
+
+*xsdnhpfyqoksbbm8q*
+
+正常網域名稱
+
+.link http://www.alexa.com/topsites Alexa Top 500
+
+*Webssearches*
+
+* 驗證流程
+
+- 蒐集樣本
+- 建立正常與惡意特徵
+- _建立分類模型_
+
+* 樣本特徵
+
+.play classify/main.go /func main/,/^}/
+
+* To Be Continue...
+
+- SVM in golang
+
+.link https://github.com/xlvector/hector Hector
+
+- Neural Network in golang
+
+.link https://github.com/fumin/ntm NTM
+
+- Mutual Information in golang
+
+.link https://github.com/guesslin/mits MITS
