@@ -1,0 +1,134 @@
+Introduce Golang
+30 Apr 2015
+Tags: Golang
+
+Yu-Han Lin(林育漢)
+副工程師, 財團法人資訊工業策進會
+guesslin1986@gmail.com
+https://github.com/guesslin
+@guesslin1986
+
+* Who Am I?
+
+- 財團法人資訊工業策進會資安科技研究所 副工程師
+- 高大資管碩士(聽說很兇的助教)
+- 中山資工學士(CDPA 兩任會長)
+
+* Agenda
+
+- Go 是什麼？
+- 誰在使用 Golang
+- Golang 的特性
+- Advanced topic
+- 線上資源
+
+* Go 是什麼？
+
+* Go 是什麼？
+
+- 由 Google 於2009年正式推出的程式語言
+- 強調程式的並行性計算(Concurrency)
+- 語言語法樣各種程式語言取經(C/C++, Python, Java...)
+
+* 誰在使用Golang
+
+* 誰在使用Golang
+
+- download.google.com
+- Docker
+- Packer
+- JuJu
+- CloudFlare
+- SoundCloud
+- Kubbernetes
+
+* Golang 的特性
+
+* Golang is
+
+- 高效率的(High Efficient)
+- 並行性的(Concurrency)
+- 編譯的(Compiled)
+- 程式碼易讀(Easy to read)
+
+* Golang Example
+
+.play hello/hello.go
+
+* Arch of Go
+
+	$GOPATH/
+		bin/
+		pkg/
+		src/
+			github.com/
+				guesslin/
+					hello/
+						hello.go
+
+* 變數宣告
+
+- 宣告一個變數 i 型態為 int
+
+	var i int
+
+- 宣告一個變數 a 型態為 int 初始值 1
+
+	a := 1
+
+* 變數宣告
+
+- 以往 C 語言宣告 function pointer 
+
+	int (*fp)(int, int) // 有人要試著挑戰看看嗎？
+
+- Golang 宣告 function variable
+
+	var fp func(int, int) int
+
+* 迴圈
+
+- for loop
+
+	for i := 0; i <= 10; i++ {
+	}
+
+- infinite loop
+
+	for {
+	}
+
+- iterate variable
+
+	for index, content := range var_slice {
+	}
+
+* 練習
+
+- 使用 net/http 套件抓取網頁內容
+
+.code ./url/url.go /func fetch/,/^}/
+
+* Let's Have Fun
+
+.link http://refreshing-well-815.appspot.com/ Have Fun
+
+- 使用 GAE 平台
+
+* Advanced Topic
+
+* Concurrency Pattern
+
+.code ./multi_url/multi_url.go /func fetch/,/^}/
+
+* Concurrency Pattern
+
+.code ./multi_url/multi_url.go /func main/,/^}/
+
+* 線上資源
+
+.link https://play.golang.org/ PlayGround
+.link http://golang.org/ Golang 官網
+.link http://blog.golang.org/ Golang 官方部落格
+.link https://golang.slack.com/ Golang 台北 Slack 群組
+.link http://golang.kktix.cc/ Golang 台北群組活動
