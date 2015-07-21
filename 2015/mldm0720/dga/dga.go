@@ -6,7 +6,7 @@ import (
 )
 
 // start DGA OMIT
-func generate(year, month, day int) string {
+func generate(year, month, day int64) string {
 	var buffer bytes.Buffer
 	for i := 0; i < 16; i++ {
 		year = (((year ^ 8) * year) >> 11) ^ ((year & 0xFFFFFFF0) << 17)

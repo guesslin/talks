@@ -125,6 +125,7 @@ APT攻擊行為也被稱為有成其針對性目標的攻擊
 
 - 惡意入侵偵測
 入侵偵測系統
+異常偵測
 
 - 惡意網域域名
 
@@ -174,16 +175,18 @@ DGA所產生的網域名稱
 
 .play classify/main.go /func main/,/^}/
 
-* To Be Continue...
+* To Be Complete...
 
-- SVM in golang
+- Machine Learning Lib in golang
 
 .link https://github.com/xlvector/hector Hector
 
-- Neural Network in golang
+- Neural Turing Network in golang
 
 .link https://github.com/fumin/ntm NTM
 
 - Mutual Information in golang
 
 .link https://github.com/guesslin/mits MITS
+
+* Q & A
