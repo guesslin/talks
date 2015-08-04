@@ -71,12 +71,26 @@ https://github.com/guesslin
 - 宣告一個變數 i 型態為 int
 
 	var i int
+	// 變數 i 型態為 int
 
 - 宣告一個變數 a 型態為 int 初始值 1
 
+	var a int = 1
+	// 變數 a 型態為 int 初始值為 1 
+
+- 宣告一個變數 a 型態為 int 初始值 1  // 使用自動型態
+
 	a := 1
+	// 變數 a 型態為 int 初始值為 1 
 
 * 變數宣告
+
+- golang的變數宣靠方法僅需由左往右解讀
+- Ｃ語言則是需要先找到最內層的變數名稱
+
+對照以往複雜的函式指標的宣告即可看出明顯差異
+
+* 變數宣告 - 函式指標
 
 - 以往 C 語言宣告 function pointer 
 
@@ -85,6 +99,20 @@ https://github.com/guesslin
 - Golang 宣告 function variable
 
 	var fp func(int, int) int
+
+* 變數宣告 - 函式指標 解
+
+- 以往 C 語言宣告 function pointer 
+
+	int (*fp)(int, int) 
+	// fp is a pointer point to a function that has two parameter
+	// which both are int type 
+	// and function return int result
+
+- Golang 宣告 function variable
+
+	var fp func(int, int) int
+	// variable fp is func with two int parameter and return int
 
 * 迴圈
 
@@ -115,6 +143,8 @@ https://github.com/guesslin
 
 - 使用 GAE 平台
 
+.link https://cloud.google.com/appengine/docs/go/gettingstarted/introduction GAE in golang
+
 * Advanced Topic
 
 * Concurrency Pattern
@@ -127,7 +157,7 @@ https://github.com/guesslin
 
 * 線上資源
 
-.link https://play.golang.org/ PlayGround
+.link https://play.golang.org/ Golang PlayGround
 .link http://golang.org/ Golang 官網
 .link http://blog.golang.org/ Golang 官方部落格
 .link https://golang.slack.com/ Golang 台北 Slack 群組
