@@ -1,0 +1,3 @@
+[submodule "2016/gtg19"]
+	path = 2016/gtg19
+	url = git@github.com:guesslin/gtg19.git
